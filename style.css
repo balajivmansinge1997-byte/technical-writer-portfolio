@@ -8,7 +8,7 @@
 body {
   font-family: Arial, Helvetica, sans-serif;
   color: #111827;
-  background: #ffffff;
+  background: #fafafa;
   line-height: 1.6;
 }
 
@@ -20,7 +20,7 @@ body {
 
 /* HEADER */
 .header {
-  background: #374151;
+  background: #1f2933; /* Charcoal */
   color: #ffffff;
 }
 
@@ -40,7 +40,7 @@ body {
 
 /* HERO */
 .hero {
-  background: #e5e7eb;
+  background: #f1f3f5; /* Ivory */
   text-align: center;
   padding: 4rem 0;
 }
@@ -55,7 +55,7 @@ body {
 }
 
 .btn {
-  background: #374151;
+  background: #1f2933;
   color: #ffffff;
   padding: 12px 26px;
   text-decoration: none;
@@ -68,11 +68,11 @@ body {
 }
 
 .white {
-  background: #ffffff;
+  background: #fafafa;
 }
 
 .grey {
-  background: #f3f4f6;
+  background: #f1f3f5;
 }
 
 .section h3 {
@@ -80,7 +80,7 @@ body {
   color: #111827;
 }
 
-/* SKILLS */
+/* SKILLS & WORK GRID */
 .skills-grid,
 .work-grid {
   display: grid;
@@ -97,6 +97,7 @@ body {
 
 /* EXPERIENCE */
 .experience-box {
+  background: #ffffff;
   border: 1px solid #d1d5db;
   padding: 1.5rem;
 }
@@ -113,7 +114,7 @@ body {
 
 /* FOOTER */
 .footer {
-  background: #374151;
+  background: #1f2933;
   color: #ffffff;
   text-align: center;
   padding: 1.2rem 0;
