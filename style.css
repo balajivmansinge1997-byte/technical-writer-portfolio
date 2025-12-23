@@ -84,13 +84,10 @@ body {
    HERO
 ============================= */
 .hero {
-  position: relative;
-  background: linear-gradient(rgba(15,23,42,0.85), rgba(30,64,175,0.85)), url("images/tech-bg.png");
-  background-size: cover;
-  background-position: center;
-  color: #fff;
-  padding: 100px 20px;
-  text-align: center;
+  background:
+    linear-gradient(135deg, rgba(13, 27, 42, 0.92), rgba(13, 27, 42, 0.92)),
+    url("https://balajivmansinge1997-byte.github.io/technical-writer-portfolio/images/tech-bg.png")
+    center / cover no-repeat;
 }
 
 .hero h1 {
@@ -226,3 +223,4 @@ body {
   cursor:pointer;
   display:none;
 }
+
