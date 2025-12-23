@@ -16,46 +16,74 @@ body {
   padding: 0 20px;
 }
 
-/* Navbar */
-.navbar {
+/* -------------------
+   Vertical Navbar
+------------------- */
+.navbar-container-vertical {
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 15px 20px;
-  background: rgba(15, 23, 42, 0.85);
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  backdrop-filter: blur(10px);
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 20px;
 }
 
-.nav-links {
+.nav-logo {
+  font-size: 24px;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+  margin-bottom: 20px;
+}
+
+.nav-links-vertical {
   list-style: none;
+  padding: 0;
+  margin: 0;
   display: flex;
-  gap: 20px;
+  flex-direction: column;
+  gap: 15px;
+  width: 100%;
 }
 
-.nav-links a {
+.nav-links-vertical a {
   text-decoration: none;
   color: #fff;
-  position: relative;
+  font-size: 18px;
   transition: color 0.3s;
+  position: relative;
 }
 
-.nav-links a::after {
-  content:"";
+.nav-links-vertical a::after {
+  content: "";
   position: absolute;
-  width:0;
-  height:2px;
-  bottom:-4px;
-  left:0;
-  background:#fff;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #fff;
   transition: width 0.3s;
 }
 
-.nav-links a:hover::after {
-  width:100%;
+.nav-links-vertical a:hover::after {
+  width: 100%;
 }
+
+/* Navbar background and positioning */
+.navbar {
+  background: rgba(15, 23, 42, 0.95);
+  width: 220px; /* Adjust width if needed */
+  min-height: 100vh; /* Full height vertical bar */
+  position: fixed;
+  top: 0;
+  left: 0;
+  padding: 20px;
+  z-index: 1000;
+}
+
+/* Push main content to the right */
+body {
+  margin-left: 240px; /* Slightly more than navbar width */
+}
+
 
 /* Hero */
 .hero {
@@ -227,3 +255,4 @@ body.dark .case-study .highlight { background:#1e293b; border-left-color:var(--a
 }
 
 .theme-toggle:hover { transform: rotate(15deg); }
+
