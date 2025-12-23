@@ -93,8 +93,11 @@ body {
 
   image-rendering: -webkit-optimize-contrast;
 }
-
-
+.hero h1,
+.hero p {
+  color: #ffffff;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
 
 .hero h1 {
   font-size: 42px;
@@ -229,5 +232,21 @@ body {
   cursor:pointer;
   display:none;
 }
+/* Glass backdrop for hero text */
+.glass {
+  background: rgba(0, 0, 0, 0.45);
+  padding: 40px;
+  border-radius: 14px;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+
+/* Ensure hero text stays bright */
+.hero h1,
+.hero p {
+  color: #ffffff;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.6);
+}
+
 
 
