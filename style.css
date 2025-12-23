@@ -85,10 +85,16 @@ body {
 ============================= */
 .hero {
   background:
-    linear-gradient(135deg, rgba(13, 27, 42, 0.92), rgba(13, 27, 42, 0.92)),
-    url("https://balajivmansinge1997-byte.github.io/technical-writer-portfolio/images/tech-bg.png")
-    center / cover no-repeat;
+    linear-gradient(
+      rgba(13, 27, 42, 0.85),
+      rgba(13, 27, 42, 0.85)
+    ),
+    url("images/tech-bg.png") center / cover no-repeat;
+
+  image-rendering: -webkit-optimize-contrast;
 }
+
+
 
 .hero h1 {
   font-size: 42px;
@@ -223,4 +229,5 @@ body {
   cursor:pointer;
   display:none;
 }
+
 
