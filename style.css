@@ -16,68 +16,95 @@ body {
   padding: 0 20px;
 }
 
-/* -------------------
-   Vertical Navbar
-------------------- */
-.navbar-container-vertical {
+/* =========================
+   HORIZONTAL NAVBAR - TOP
+============================ */
+.navbar {
+  background: rgba(15, 23, 42, 0.95);
+  padding: 15px 20px;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+}
+
+.navbar-container {
   display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  padding: 20px;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
 }
 
 .nav-logo {
-  font-size: 24px;
+  font-size: 26px;
   font-weight: 700;
   color: #fff;
   text-decoration: none;
-  margin-bottom: 20px;
 }
 
-.nav-links-vertical {
+.nav-links {
   list-style: none;
-  padding: 0;
-  margin: 0;
   display: flex;
-  flex-direction: column;
-  gap: 15px;
-  width: 100%;
+  gap: 25px;
 }
 
-.nav-links-vertical a {
-  text-decoration: none;
-  color: #fff;
-  font-size: 18px;
-  transition: color 0.3s;
+.nav-links li {
   position: relative;
 }
 
-.nav-links-vertical a::after {
-  content: "";
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: -4px;
-  left: 0;
-  background: #fff;
-  transition: width 0.3s;
+.nav-links a {
+  color: #38bdf8; /* bright blue */
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 500;
+  padding: 8px 12px;
+  border-radius: 8px;
+  transition: all 0.3s ease;
 }
 
-.nav-links-vertical a:hover::after {
+/* Hover effects */
+.nav-links a:hover {
+  background: #2563eb;
+  color: #fff;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  transform: translateY(-2px);
+}
+
+/* Optional: underline animation */
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -4px;
+  width: 0%;
+  height: 2px;
+  background: #38bdf8;
+  transition: 0.3s;
+}
+
+.nav-links a:hover::after {
   width: 100%;
 }
 
-/* Navbar background and positioning */
-.navbar {
-  background: rgba(15, 23, 42, 0.95);
-  width: 220px; /* Adjust width if needed */
-  min-height: 100vh; /* Full height vertical bar */
-  position: fixed;
-  top: 0;
-  left: 0;
-  padding: 20px;
-  z-index: 1000;
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .navbar-container {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .nav-links {
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+  }
+  .nav-links a {
+    width: 100%;
+    text-align: left;
+  }
 }
+
 
 /* Push main content to the right */
 body {
@@ -255,4 +282,5 @@ body.dark .case-study .highlight { background:#1e293b; border-left-color:var(--a
 }
 
 .theme-toggle:hover { transform: rotate(15deg); }
+
 
