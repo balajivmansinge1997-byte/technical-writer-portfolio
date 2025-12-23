@@ -177,6 +177,22 @@
 <footer class="footer">
   <p>© 2025 Balaji Mansinge</p>
 </footer>
+<script>
+  const observer = new IntersectionObserver(
+    (entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add("show");
+        }
+      });
+    },
+    { threshold: 0.15 }
+  );
+
+  document.querySelectorAll(".section, .card, .case-study .block")
+    .forEach(el => observer.observe(el));
+</script>
 
 </body>
 </html>
+
