@@ -55,15 +55,21 @@ body {
 
 /* Hero */
 .hero {
-  background: linear-gradient(to right, #2563eb, #1e40af);
-  color: #fff;
-  padding: 80px 20px;
+  position: relative;
+  background: 
+    linear-gradient(
+      rgba(15, 23, 42, 0.85),
+      rgba(30, 64, 175, 0.85)
+    ),
+    url("images/tech-bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  color: #ffffff;
+  padding: 100px 20px;
   text-align: center;
 }
 
-.hero-buttons {
-  margin-top: 20px;
-}
 
 .btn {
   padding: 10px 20px;
@@ -221,4 +227,15 @@ html {
 .case-study .highlight:hover {
   transform: scale(1.02);
 }
+.hero h1 {
+  font-size: 42px;
+  font-weight: 700;
+  text-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+}
+
+.hero p {
+  font-size: 18px;
+  opacity: 0.95;
+}
+
 
