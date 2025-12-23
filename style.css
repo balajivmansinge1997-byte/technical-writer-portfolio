@@ -139,3 +139,86 @@ body {
   text-align: center;
   padding: 20px;
 }
+/* =========================
+   ANIMATIONS & INTERACTIVITY
+   ========================= */
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Fade-in animation */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Initial hidden state */
+.section,
+.card,
+.case-study .block {
+  opacity: 0;
+  transform: translateY(30px);
+}
+
+/* Visible state */
+.show {
+  animation: fadeUp 0.8s ease forwards;
+}
+
+/* Card hover effect */
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+}
+
+/* Button hover animation */
+.btn {
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.95;
+}
+
+/* Navbar link underline animation */
+.nav-links a {
+  position: relative;
+}
+
+.nav-links a::after {
+  content: "";
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -4px;
+  left: 0;
+  background: #fff;
+  transition: width 0.3s ease;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
+}
+
+/* Case study highlight hover */
+.case-study .highlight {
+  transition: transform 0.3s ease;
+}
+
+.case-study .highlight:hover {
+  transform: scale(1.02);
+}
+
